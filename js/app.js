@@ -8,7 +8,7 @@ $(document).ready(function() {
         e.preventDefault();
         if (x < max_fields) {
             x++;
-            $(wrapper).append('<div><input type="text" name="mytext[]"/><a href="#" class="delete">Delete</a></div>'); //add input box
+            $(wrapper).append('<div><input class="form-control" type="text" name="mytext[]"/><a href="#" class="delete btn btn-small btn-secondary">Delete</a></div>'); //add input box
         } else {
             alert('You Reached the limits')
         }

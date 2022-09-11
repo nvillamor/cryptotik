@@ -1,0 +1,10 @@
+header{
+    height: 150px;
+}
+main{
+    height: 500px;
+    background-color: aqua;
+}
+.oculto{
+    display: none;
+}
