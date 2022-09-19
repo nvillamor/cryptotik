@@ -22,17 +22,10 @@ $(document).ready(function() {
     })
 });
 
-$(function() {
-    $("[data-toggle=popover]").popover({
-      html: true,
-      placement:"bottom",
-      content: function() {
-        var content = $(this).attr("data-popover-content");
-        return $(content).children(".popover-body").html();
-      },
-      title: function() {
-        var title = $(this).attr("data-popover-content");
-        return $(title).children(".popover-heading").html();
-      }
-    });
-  });
+document.getElementById("selectcoin1").onclick = function() {
+    var toastElList = [].slice.call(document.querySelectorAll('.toast'))
+    var toastList = toastElList.map(function(toastEl) {
+      return new bootstrap.Toast(toastEl)
+    })
+    toastList.forEach(toast => toast.show()) 
+  }
