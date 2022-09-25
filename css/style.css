@@ -1,10 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,700;1,300&display=swap');
+:root{
+    /*Paleta de colores*/
+    --color-primario:#3E098F;
+    --color-secundario:#FDF643;
+    --color-terciario:gray;
+    --color-opcional:#7632DB;
+}
+
+*{
+    font-family: 'Roboto', Helvetica, sans-serif;
+}
+
+/*  -----------  configuracion de estructura : etiquetas principales  ----------- */
+body{
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(62,9,143,1) 35%, rgba(118,50,219,1) 100%);
+}
+
 header{
     height: 150px;
+    color: var(--color-secundario);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
 }
+
 main{
     height: 500px;
-    background-color: aqua;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
+
+/*  -----------  configuracion de contenedores principales : marco y visor  ----------- */
+
+#contenedor-marco{
+    background-color: var(--color-primario);
+    height: 300px;
+    width: 520px;
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#contenedor-visor{
+    background-color: var(--color-terciario);
+    height: 240px;
+    width: 320px;
+    border-radius: 15px;
+}
+
+#linea-contenedora{
+    background-color: var(--color-secundario);
+    height: 50px;
+    width: 320px;
+    border-radius: 15px 15px 0px 0px;
+}
+
+/* ----------- configuracion de componentes ----------- */
+.btn-moneda{
+    height: 50px;
+    border-radius: 15px 0px 0px 0px;
+}
+
 .oculto{
     display: none;
 }
+
+
+/*medias query*/
+
