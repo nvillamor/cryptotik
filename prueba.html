@@ -1,67 +1,196 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- CSS only -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="/css/style.css" rel="stylesheet">
+
+    <title>Cryptotik v2.0 - Config WEB</title>
+
 </head>
+
 <body>
-    <header></header>
-    <aside></aside>
-    <main>   
-
-        <div class="container bg-danger d-flex">
-
-            <div class="input-group">
-                <span class="input-group-text" id="basic-addon1"><i class="bi bi-coin"></i> 1</span>
-                <select class="form-select" id="inputGroupSelect01">
-                    <option selected>Choose...</option>
-                    <option value="1">One</option>
-                    <option value="2">Two</option>
-                    <option value="3">Three</option>
-                  </select>
+    <!-- contenido de cabecera + navbar -->
+    <header>
+        <h1>CryptoTik v2.0 - Configuration</h1>
+    </header>
+    <!-- contenido principal -->
+    <main>
+        <div id="contenedor-marco">
+            <div id="leyenda">CRYPTOTIK</div>
+            <div id="contenedor-visor">
+                <section>
+                    <div id="linea-contenedora">
+                        <!-- componente boton selector de moneda -->
+                        <div class="btn-group">
+                            <button class="btn" data-bs-toggle="modal" data-bs-target="#ConfigModal"><i class="bi bi-gear"></i></button>
+                            
+                            <button type="button" class="btn-moneda btn btn-danger dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="bi bi-coin"></i></button>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item">Cripto1</a></li>
+                                <li><a class="dropdown-item">Cripto2</a></li>
+                                <li><a class="dropdown-item">Cripto3</a></li>
+                                <li><a class="dropdown-item">Cripto4</a></li>
+                                <li><a class="dropdown-item">Cripto5</a></li>
+                            </ul>
+                        </div>
+                    
+                        <div id="linea-contenedora2">
+                            <!-- componente boton selector de moneda -->
+                            <div class="btn-group">
+                                <button class="btn" data-bs-toggle="modal" data-bs-target="#ConfigModal"><i class="bi bi-gear"></i></button>
+                                
+                                <button type="button" class="btn-moneda btn btn-danger dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="bi bi-coin"></i></button>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item">Cripto1</a></li>
+                                    <li><a class="dropdown-item">Cripto2</a></li>
+                                    <li><a class="dropdown-item">Cripto3</a></li>
+                                    <li><a class="dropdown-item">Cripto4</a></li>
+                                    <li><a class="dropdown-item">Cripto5</a></li>
+                                </ul>
+                            </div>
+                        
+                    </div>
+                </section>
             </div>
-
-            <div class="input-group bg-warning p-2 containerCriptotik">     
-                <span class="input-group-text" id="basic-addon1"><i class="bi bi-currency-bitcoin"></i></span>
-                <button class="btn btn-primary oculto" type="button" disabled>
-                <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
-                </button>
-                <span class="input-group-text" id="basic-addon1">BTC</span>
-                <span class="input-group-text" id="basic-addon1">123456</span>
-
-                <button type="button" class="btn btn-primary" id="liveToastBtn">Show live toast</button>
-
-                <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
-                    <div class="toast-header">
-                      <img src="..." class="rounded me-2" alt="...">
-                      <strong class="me-auto">Bootstrap</strong>
-                      <small class="text-muted">11 mins ago</small>
-                      <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
-                    </div>
-                    <div class="toast-body">
-                      Hello, world! This is a toast message.
-                    </div>
-                  </div>
-
+            <div id="leyenda">
+                <i class="bi bi-yin-yang"></i>
+                <i class="bi bi-airplane-engines-fill"></i>
             </div>
         </div>
 
+        <div class="modal fade" id="ConfigModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Configuration - Coin #x</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+
+                    <div class="row">
+                        <div class="col">                         
+                                <select class="form-select" id="inputGroupSelect01">
+                                    <option selected>Choose...</option>
+                                    <option value="1">Ethereum</option>
+                                    <option value="2">Bitcoin</option>
+                                    <option value="3">Ethereum Classic</option>
+                                    <option value="4">Ravencoin</option>
+                                    <option value="5">Ergo</option>
+                                    <option value="6">Beam</option>
+                                    <option value="7">Alephium</option>
+                                </select>
+                          </div>
+                        <div class="col">
+                            
+                          <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="">
+                            <label class="form-check-label" for="flexCheckChecked">Total Volume</label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="">
+                            <label class="form-check-label" for="flexCheckChecked">24h: High</label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="">
+                            <label class="form-check-label" for="flexCheckChecked">24h: Low </label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="">
+                            <label class="form-check-label" for="flexCheckChecked">24h: Price Change </label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="">
+                            <label class="form-check-label" for="flexCheckDefault">Market Cap</label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="">
+                            <label class="form-check-label" for="flexCheckChecked">Market Cap: Rank</label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="">
+                            <label class="form-check-label" for="flexCheckChecked">Market Cap: Change 24h</label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="">
+                            <label class="form-check-label" for="flexCheckChecked">Market Cap: Change 24h (%)</label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="">
+                            <label class="form-check-label" for="flexCheckChecked">Supply: Circulating</label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="">
+                            <label class="form-check-label" for="flexCheckChecked">Supply: Total</label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="">
+                            <label class="form-check-label" for="flexCheckChecked">Supply: Max</label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="">
+                            <label class="form-check-label" for="flexCheckChecked">ATH: All Time High</label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="">
+                            <label class="form-check-label" for="flexCheckChecked">ATH: Change (%) </label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="">
+                            <label class="form-check-label" for="flexCheckChecked">ATH: Date</label>
+                          </div>
+                        </div>
+
+                        <div class="col">
+                            <input class="form-check-input " type="checkbox" value="">
+                            <label class="form-check-label" for="flexCheckChecked">1 hour</label>
+
+                            <input class="form-check-input " type="checkbox" value="">
+                            <label class="form-check-label" for="flexCheckChecked">24 hours</label>
+
+                            <input class="form-check-input " type="checkbox" value="">
+                            <label class="form-check-label" for="flexCheckChecked">7 days</label>
+
+                            <input class="form-check-input " type="checkbox" value="">
+                            <label class="form-check-label" for="flexCheckChecked">14 days</label>
+
+                            <input class="form-check-input " type="checkbox" value="">
+                            <label class="form-check-label" for="flexCheckChecked">30 days</label>
+
+                            <input class="form-check-input " type="checkbox" value="">
+                            <label class="form-check-label" for="flexCheckChecked">200 days</label>
+
+                            <input class="form-check-input " type="checkbox" value="">
+                            <label class="form-check-label" for="flexCheckChecked">1 Year</label>
+                        </div>
+                    </div>
+
+                 
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+              </div>
+            </div>
+          </div>
 
     </main>
+    <!-- contenido pie de pagina -->
     <footer>
-
     </footer>
-    
-    <!-- JavaScript Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
     <script type="text/javascript" src="./js/app.js"></script>
 
 </body>
+
 </html>
