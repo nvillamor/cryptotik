@@ -43,6 +43,9 @@ main{
     display: flex;
     justify-content:space-around;
     align-items: center;
+    box-shadow: 2px 1px 5px gray;
+    position: relative;
+    z-index: 3;
 }
 
 #contenedor-visor{
@@ -50,13 +53,25 @@ main{
     height: 240px;
     width: 320px;
     border-radius: 15px;
+    position: relative;
+    z-index: 2;
 }
 
-#linea-contenedora{
+#marco-redondo{
+    border: 5px solid var(--color-primario);
+    height: 240px;
+    width: 320px;
+    border-radius: 15px;
+
+}
+
+.linea-contenedora{
     background-color: var(--color-secundario);
     height: 50px;
     width: 320px;
-    border-radius: 15px 15px 0px 0px;
+    position: absolute;
+    left: -1px;
+    z-index: -1;
 }
 
 #leyenda{
@@ -71,7 +86,7 @@ main{
 /* ----------- configuracion de componentes ----------- */
 .btn-moneda{
     height: 50px;
-    border-radius: 15px 0px 0px 0px;
+    border-radius: 0px;
 }
 
 .oculto{
